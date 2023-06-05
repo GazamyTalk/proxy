@@ -13,7 +13,7 @@ else
     echo "ssl file not exist. run initial nginx"
     cp /app/initial_nginx.conf /etc/nginx/nginx.conf
     service nginx start
-    certbot run -i nginx --webroot -w /usr/share/nginx/html -d 139.150.74.9.sslip.io -n --agree-tos --email "${ADMIN_EMAIL}" --dry-run
+    certbot run -i nginx --webroot -w /usr/share/nginx/html -d 139.150.74.9.sslip.io -n --agree-tos --email "${ADMIN_EMAIL}"
     cp /app/nginx.conf /etc/nginx/nginx.conf
 fi
 service nginx stop
